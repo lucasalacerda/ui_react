@@ -1,7 +1,8 @@
 import React from 'react';
 import './index.css';
+import { Button } from "../Button/Button";
 
-export class FormComponent extends React.Component{
+export class SearchInput extends React.Component{
     constructor(props){
         super(props)
         this.state = { 
@@ -13,9 +14,8 @@ export class FormComponent extends React.Component{
         return (
            <div class="form-style-8">
               <form>
-                <h1>{this.props.propTest}</h1>
                 <input type="search" name="search" placeholder={this.props.fieldPlaceholder} />
-                <button>{this.props.buttonTitle}</button>
+                <Button />
               </form>
             </div>
         );

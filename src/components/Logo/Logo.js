@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.css';
 
-export class Header extends React.Component {
+export class Logo extends React.Component {
     render() {
         return (
             <ul className="nav">
