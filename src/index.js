@@ -1,21 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { SearchInput } from './components/Input/SearchInput';
+import { InputSearch } from './components/InputSearch/InputSearch';
 import { Header } from "./components/Header/Header";
 import { Logo } from "./components/Logo/Logo";
+import { BrowserRouter } from 'react-router-dom';
+import { LoginModal } from './components/LoginModal/LoginModal';
 
-class Body extends React.Component {
+class App extends React.Component {
     render() {
-        return[
-            <Header />,
-            <Logo />,
-            <SearchInput propTest="lala" fieldPlaceholder="Search" buttonTitle="lalala"/>
-        ]
+        return(
+            <div>
+                <Header />
+                <Logo />
+                <InputSearch fieldPlaceholder="Search for events, countries, cities..." buttonTitle="Search"/>
+                <LoginModal />
+            </div>
+        );
     }
     
 }
 
-ReactDOM.render(
-    <Body />,
+ReactDOM.render((
+     <BrowserRouter>
+         <App />
+     </BrowserRouter>
+),
     document.getElementById('root')
 );

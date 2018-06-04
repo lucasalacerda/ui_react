@@ -4,7 +4,7 @@ import './index.css';
 export class Logo extends React.Component {
     render() {
         return (
-           <h1>Titulo do projeto</h1>
+           <h1 className="title">Events</h1>
         );
     }
 }

@@ -10,7 +10,7 @@ export class Button extends React.Component {
     }
     render() {
         return (
-            <button type="button" className="btn btn-outline-dark">Dark</button>
+            <button type="button" className="btn btn-outline-dark rounded-0">{this.props.buttonTitle}</button>
         );
     }
 }
