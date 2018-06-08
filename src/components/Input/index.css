@@ -1,0 +1,9 @@
+body, html{
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    padding: 2px;
+    margin: 5px 2px 2px 1px;
+}

@@ -5,9 +5,15 @@ import { Input } from '../Input/Input';
 
 
 export class LoginModal extends React.Component {
+
+    clearFIelds(){
+        alert('aaa');
+        document.querySelector('input[placeholder=Email]').reset();
+    }
+
     render() {
         return (       
-            <div className="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLoginLabel" aria-hidden="true">
+            <div className="modal fade" id="modalLogin" role="dialog" aria-labelledby="modalLoginLabel" aria-hidden="true">
             <div className="modal-dialog" role="document">
                 <div className="modal-content">
                 <div className="modal-header">
@@ -17,10 +23,12 @@ export class LoginModal extends React.Component {
                     </button>
                 </div>
                 <div className="modal-body">
-                    <Input fieldPlaceHolder="Email"/>
+                    <Input fieldPlaceholder="Email"/>
+                    <Input type="password" fieldPlaceholder="Senha"/>
+
                 </div>
                 <div className="modal-footer text-center">
-                    <Button buttonTitle="Cancel" type="button" data-dismiss="modal" />
+                    <Button buttonTitle="Cancel" type="button" onClick={this.clearFields}/>
                     <Button buttonTitle="Sigin"/>
                 </div>
                 </div>
