@@ -5,6 +5,11 @@ html, body{
 
 .title {
     text-align: center;
-    margin: 10px;
-    padding: 50px 0px 0px 0px;
+    width: 50%;
+    height:50%;
+    margin-top:-10%;
+    margin-left:-25%;
+    position:absolute;
+    top:50%;
+    left:50%;
 }

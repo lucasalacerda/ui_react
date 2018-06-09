@@ -9,7 +9,6 @@ export class InputSearch extends React.Component{
             fieldPlaceholder : '',
             button : ''}
     }
-
     render(){
         return (
            <div className="form-style-8 text-center">
