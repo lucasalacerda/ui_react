@@ -10,6 +10,7 @@ import { LoginModal } from './components/LoginModal/LoginModal';
 import { Home } from "./containers/Home/Home";
 import { About } from "./containers/About/About";
 import { NoMatch } from "./containers/NoMatch/NoMatch";
+import { ResultPage } from './containers/ResultPage/ResultPage';
 
 
 class App extends React.Component {
@@ -17,10 +18,10 @@ class App extends React.Component {
         return(
             <div>
                 <Header />
-                <Logo />
                 <Switch>
                     <Route exact path="/" component={Home}/>
                     <Route path="/about" component={About}/>
+                    <Route path="/result" component={ResultPage}/>
                     {/* <Route path="/:user" component={User}/> */}
                     <Route component={NoMatch}/>
                 </Switch>

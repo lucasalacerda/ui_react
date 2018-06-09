@@ -1,6 +1,6 @@
 import React from 'react';
-import './index.css';
 import { Button } from "../Button/Button";
+import './index.css';
 
 export class InputSearch extends React.Component{
     constructor(props){
