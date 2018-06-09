@@ -4,7 +4,6 @@ import { BrowserRouter } from 'react-router-dom';
 import { Switch, Route } from 'react-router'
 
 import { Header } from "./components/Header/Header";
-import { Logo } from "./components/Logo/Logo";
 import { LoginModal } from './components/LoginModal/LoginModal';
 
 import { Home } from "./containers/Home/Home";
