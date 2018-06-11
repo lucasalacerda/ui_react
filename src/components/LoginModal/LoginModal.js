@@ -28,8 +28,8 @@ export class LoginModal extends React.Component {
 
                 </div>
                 <div className="modal-footer text-center">
-                    <Button buttonTitle="Cancel" type="button" onClick={this.clearFields}/>
-                    <Button buttonTitle="Sigin"/>
+                    <Button title="Cancel" type="button" onClick={this.clearFields}/>
+                    <Button title="Sigin"/>
                 </div>
                 </div>
             </div>

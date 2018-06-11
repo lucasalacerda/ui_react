@@ -7,7 +7,7 @@ export class Home extends React.Component {
         return (
             <div>
                 <Logo/>
-                <InputSearch fieldPlaceholder="Search for events, countries, cities..." buttonTitle="Search"/>  
+                <InputSearch fieldPlaceholder="Search for events, countries, cities..." title="Search" {...this.props}/>  
             </div>
         )
     }       

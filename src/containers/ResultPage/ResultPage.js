@@ -3,19 +3,22 @@ import axios from 'axios';
 
 export class ResultPage extends React.Component {
     state = {
-        persons: []
+        results: []
       }
       componentDidMount() {
-        axios.get(`https://jsonplaceholder.typicode.com/users`)
+        let search = this.props.location.search;
+        console.log(this.props)
+        axios.get(`http://openlibrary.org/search.json${search}`)
           .then(res => {
-            const persons = res.data;
-            this.setState({ persons });
+              console.log(res)
+            const results = res.data.docs;
+            this.setState({ results });
           })
       }
     render(){
         return (
             <ul>
-                {this.state.persons.map(person => <li>{person.name}</li>)}
+                {this.state.results.map((result, index) => <li key={index}>{result.title_suggest}</li>)}
             </ul>
         )
     }       
