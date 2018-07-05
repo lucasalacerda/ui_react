@@ -1,15 +1,10 @@
 import React from 'react';
 import './index.css';
 import { Button } from "../Button/Button";
-import { Input } from '../Input/Input';
+import Input from '../Input/Input';
 
 
 export class LoginModal extends React.Component {
-
-    clearFIelds(){
-        alert('aaa');
-        document.querySelector('input[placeholder=Email]').reset();
-    }
 
     render() {
         return (       
@@ -32,10 +27,9 @@ export class LoginModal extends React.Component {
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <div className="modal-footer text-center">
-                    <Button title="Cancel" type="button" onClick={this.clearFields}/>
+                    <Button title="Cancel" type="button" data-dismiss="modal"/>
                     <Button title="Sigin"/>
                 </div>
                 </div>
