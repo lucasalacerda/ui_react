@@ -1,17 +1,3 @@
-html, body{
-    margin: 0;
-    padding: 0;
-}
-
-.form-style-8{
-    width: 50%;
-    height:50%;
-    margin-top:-50px;
-    margin-left:-25%;
-    position:absolute;
-    top:50%;
-    left:50%;
-}
 
 .form-style-8 input[type="search"],
 .form-style-8 textarea,
@@ -24,8 +10,7 @@ html, body{
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    width: 100%;
-    padding: 12px 20px;
+
 }
 .form-style-8 textarea{
     resize:none;

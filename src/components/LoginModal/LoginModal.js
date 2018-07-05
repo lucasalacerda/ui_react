@@ -23,8 +23,15 @@ export class LoginModal extends React.Component {
                     </button>
                 </div>
                 <div className="modal-body">
+                    <div className="container">
+                        <div className="row justify-content-md-center">
+                            <div className="col">
+
                     <Input fieldPlaceholder="Email"/>
                     <Input type="password" fieldPlaceholder="Senha"/>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
                 <div className="modal-footer text-center">

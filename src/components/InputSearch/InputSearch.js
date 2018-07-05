@@ -1,29 +1,21 @@
-import React, { Component } from 'react';
-import { Button } from "../Button/Button";
+import React from 'react';
+// import { Button } from "../Button/Button";
 import './index.css';
 
-export class InputSearch extends Component{
-    constructor(props){
-        super(props)
-        this.state = { 
-            inputSearch : '',
-            fieldPlaceholder : '',
-            button : ''}
-    }
+const InputSearch = ({ getInfo, fieldPlaceholder}) => (
+	<div className="container form-style-8 text-center">
+		<div className="row">
+			<div className="col">
 
 
-    handleSearch = () => {
-        this.props.history.push(`/result?q=${this.state.inputSearch}`)
-    }
-    render(){
+	<form onSubmit={getInfo}>
+		<input type="text" name="filter" className="form-control border-dark rounded-0" placeholder={fieldPlaceholder}/>
+		<button>Search</button>
+	</form>
+			</div>
+		</div>
+	</div>
+)
 
-        return (
-           <div className="form-style-8 text-center">
-              <form>
-                <input onChange={ e => this.setState({inputSearch: e.target.value})} className="form-control border-dark rounded-0" type="search" name="search" placeholder={this.props.fieldPlaceholder} />
-                <Button onClick={this.handleSearch} title={this.props.title}/>
-              </form>
-            </div>
-        );
-    }
-}
+export default InputSearch;
+
