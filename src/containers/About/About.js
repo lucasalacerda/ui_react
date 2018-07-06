@@ -1,9 +1,20 @@
 import React from "react";
+import Paralax from '../../components/Paralax/Paralax'
 
-export class About extends React.Component {
+class About extends React.Component {
+
+    state = {
+        title: 'About us',
+        desc: 'We help you to find some nice places',
+    }
+
     render(){
         return (
-            <p>This is an about page (:</p>
+            <div>
+                <Paralax {...this.state}/> 
+            </div>
         )
     }       
 }
+
+export default About

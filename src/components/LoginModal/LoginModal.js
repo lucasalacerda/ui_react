@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.css';
-import { Button } from "../Button/Button";
+import Button from "../Button/Button";
 import Input from '../Input/Input';
 
 
@@ -21,8 +21,7 @@ export class LoginModal extends React.Component {
                     <div className="container">
                         <div className="row justify-content-md-center">
                             <div className="col">
-
-                    <Input fieldPlaceholder="Email"/>
+                    <Input type="text" fieldPlaceholder="Email"/>
                     <Input type="password" fieldPlaceholder="Senha"/>
                             </div>
                         </div>

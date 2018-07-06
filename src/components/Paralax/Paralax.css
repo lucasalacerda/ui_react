@@ -1,0 +1,11 @@
+.paralax {
+    background-image: url("http://www.tvsolcomunidade.com.br/wp-content/uploads/2018/01/com-amor-van-gogh.jpg");
+    min-height: 500px; 
+    background-color: black;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+}

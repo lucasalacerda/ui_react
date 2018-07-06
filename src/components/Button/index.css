@@ -3,7 +3,11 @@ html, body {
     padding: 0;
 } 
 
+.btn {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
 button {
-    margin: 8px;
-    padding: 5px;
+    margin: 10px 0px;
+    padding: 5px 0px;
 }

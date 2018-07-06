@@ -7,7 +7,7 @@ import { Header } from "./components/Header/Header";
 import { LoginModal } from './components/LoginModal/LoginModal';
 
 import Home  from "./containers/Home/Home";
-import { About } from "./containers/About/About";
+import About from "./containers/About/About";
 import { NoMatch } from "./containers/NoMatch/NoMatch";
 
 class App extends React.Component {
@@ -18,7 +18,8 @@ class App extends React.Component {
                 <Header />
                 <Switch>
                     <Route exact path="/" component={Home}/>
-                    <Route path="/about" component={About}/>
+                    <Route exact path="/home" component={Home}/>
+                    <Route exact path="/about" component={About}/>
                     <Route component={NoMatch}/>
                 </Switch>
                 <LoginModal />

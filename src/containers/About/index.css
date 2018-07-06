@@ -1,0 +1,12 @@
+.xablau2 {
+    /* background-image: url("img_parallax.jpg"); */
+    /* Set a specific height */
+    min-height: 500px; 
+    /* Create the parallax scrolling effect */
+    background-color: blue;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
