@@ -29,23 +29,30 @@ class Home extends React.Component {
 		e.preventDefault();
 		const api_call = await fetch(`https://api.jikan.moe/search/anime?q=${this.state.filter}&page=1`);
 		const data = await api_call.json();
-					const locals = data.result;
+					const locals = data;
   	  this.setState({
 				locals
 			});
 	}
 	
 	componentDidMount = async () => {
+		const myHeaders = new Headers();
+		myHeaders.append("Content-Type", "application/json");
+		myHeaders.append("Accept", "application/json");
 
 		this.setState({
 			loading: true
 		});
-		const api_call = await fetch(`http://localhost:8080/EventsCentral/api/local/`);
+		const api_call = await fetch(`http://localhost:8081/EventsCentral/api/local`, {
+			method: 'GET',
+			headers: myHeaders,
+			mode: 'cors',
+			});
 		// const api_call = await fetch(`https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${filter}&inputtype=textquery&fields=photos,formatted_address,filter,rating,opening_hours,geometry&key=${API_KEY}`);
-		const data = await api_call;
-		const locals = data.result;
+		const data = await api_call.json();
+		const locals = data;
 		console.log(locals)
-		if(data.result !== undefined){
+		if(data.result !== ''){
 			this.setState({
 				locals,
 				loading: false
@@ -68,7 +75,7 @@ class Home extends React.Component {
 		}
     return (
       <div>
-        <Title/>
+        <Title title="Events"/>
 				<Input onChange={this.handleChange} type="text" name="filter" fieldPlaceholder="filter for events, countries, cities..."/>
         {/* <FormSearch
 					onSubmit={this.handleSubmit} 
