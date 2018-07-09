@@ -2,9 +2,13 @@ import React from 'react';
 import './index.css';
 import Button from "../Button/Button";
 import Input from '../Input/Input';
-
+import { Link } from 'react-router-dom';
 
 export class LoginModal extends React.Component {
+
+    handleClick = (e) => {
+      document.querySelector('.close').click();
+    }
 
     render() {
         return (       
@@ -21,15 +25,15 @@ export class LoginModal extends React.Component {
                     <div className="container">
                         <div className="row justify-content-md-center">
                             <div className="col">
-                    <Input type="text" fieldPlaceholder="Email"/>
-                    <Input type="password" fieldPlaceholder="Senha"/>
+                                <Input type="text" fieldPlaceholder="Email"/>
+                                <Input type="password" fieldPlaceholder="Senha"/>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="modal-footer text-center">
-                    <Button title="Cancel" type="button" data-dismiss="modal"/>
-                    <Button title="Sigin"/>
+                    <Link to="/register"><Button title="Sign Up" type="button" onClick={this.handleClick} data-dismiss="modal"/></Link>
+                    <Button title="Log in"/>
                 </div>
                 </div>
             </div>
